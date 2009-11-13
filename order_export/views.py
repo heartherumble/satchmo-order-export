@@ -8,9 +8,9 @@ def admin_order_export(request, status=None, template="admin/order_export/orders
     """
     
     if status:
-        orders = Order.objects.filter(status=status)
+        orders = Order.objects.filter(status=status).order_by('id')
     else:
-        orders = Order.objects.all()
+        orders = Order.objects.all().order_by('id')
     
     return render_to_response(
         template, 
