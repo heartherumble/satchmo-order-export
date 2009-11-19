@@ -1,6 +1,4 @@
 {% load i18n %}
-{% with now as seconds %}
 <li>
-	<a href="{% url admin_new_order_export seconds|date:"U" %}">{% trans 'Export New Orders as CSV' %}</a><br/>
+	<a href="{% url admin_new_order_export %}">{% trans 'Export New Orders as CSV' %}</a><br/>
 </li>
-{% endwith %}
