@@ -3,7 +3,7 @@ from django.shortcuts import render_to_response
 from satchmo_store.shop.models import Order
 
 @staff_member_required
-def admin_order_export(request, status=None, template="admin/order_export/orders.csv", mimetype="text/csv", order_transform=None):
+def admin_order_export(request, status=None, template="order_export/orders.csv", mimetype="text/csv", order_transform=None):
     """Admin authenticated order export.
     """
     
